@@ -1,0 +1,50 @@
+body {
+    background-color: burlywood; /* background-color é a propriedade da cor do plano de fundo */
+    background-image: url('imagem.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: 0 0 0; /* color é a propriedade da cor do texto */
+}
+        
+h1{
+    color: blanchedalmond;
+}
+
+h2{
+    color: blanchedalmond;
+    font-size: 46px;
+    text-decoration: underline;
+}
+p{
+    color: blanchedalmond;
+}
+
+.fonte-20px {
+    font-size: 20px;
+}
+
+#estilo-unico {
+    
+    background-color: #9b2828;   
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    box-shadow: 0 0 30px rgb(202, 191, 36)
+
+
+/* margin - left (esquerda)
+margin - top (acima)
+margin - right (direita)
+margin - botton (abaixo) */ 
+}
+
+/*border-size
+bprder-color
+border-style
+border*/
+
+/* id é chamado por #*/
+
+/* class é chamado com .*/
