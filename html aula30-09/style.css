@@ -1,0 +1,51 @@
+:root {
+    --cor-preto: #191516;
+    --cor-branco: #ffffff;
+    --cor-vinho: #A60067;
+    --cor-azul-duvidoso: #6153CC;
+    --cor-azul-clarin: #e5f4e3;
+}
+
+body {
+    background-color:var(--cor-preto);
+    color: var(--cor-branco);
+}
+
+.item-menu{
+    color: var(--cor-azul-clarin);
+}
+
+header nav a.item-menu {
+    color: var(--cor-branco);
+    text-decoration: none;
+    border: var(--cor-azul-duvidoso) 1px solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/*
+.item-menu {
+    color: var(--cor-vinho);
+}
+*/
+
+/*
+    :link
+    :active
+    :visited
+    :hover
+*/
+
+header nav a.item-menu:hover{
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+header nav a.item-menu.item-ativo{
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+section {
+    min-height: 500px;
+}
