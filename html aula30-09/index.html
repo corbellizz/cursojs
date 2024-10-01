@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Meu site</title>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <h1>Meu site</h1>
+                    <a id="menu-sobre" class="item-menu" href="#sobre-nos">Sobre Nós</a> <!-- Assim cria-se um link para outra aba do nosso site.-->
+                    <a id="menu-contato" class="item-ativo" href="#contato">Contato</a>
+                </nav>
+            </header>
+            <section id="sobre-nos">
+                <h1>
+                Seja bem vindo(a) ao meu site
+                </h1>
+            </section>
+            <section id="contato">
+                <h2>
+                Aqui você verá o meu primeiro projeto com estilização e um menu bonito.
+                </h2>
+            </section>
+
+            <script type="text/javascript">
+                const menuSobre = document.getElementById('menu-sobre');
+                const menuContato = document.getElementById('menu-contato');
+                
+                menuSobre.addEventListener('click', function() {
+                    menuSobre.classList.toggle('item-ativo');
+                });
+    
+                menuContato.addEventListener('click', function() {
+                    menuContato.classList.toggle('item-ativo');
+                });
+            </script>
+        </body>
+</html>
