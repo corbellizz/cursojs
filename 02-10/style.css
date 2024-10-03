@@ -1,0 +1,47 @@
+:root {
+    --cor-preto: #12130f;
+    --cor-branco: #EAE6E5;
+    --cor-marrom: #8F8073;
+    --cor-verde-escuro: #5B9279;
+    --cor-verde-clarin: #8FCB9B;
+}
+
+body {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+}
+
+/*
+.item-menu {
+    color: var(--cor-marrom);
+}
+*/
+
+/*
+    :link
+    :active
+    :visited
+    :hover
+*/
+header nav a.item-menu {
+    color: var(--cor-branco);
+    text-decoration: none;
+    border: var(--cor-verde-escuro) 1px solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a.item-menu:hover {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+header nav a.item-menu.item-ativo {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+section {
+    min-height: 500px;
+}
+
