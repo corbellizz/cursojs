@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Meu site</title>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <h1>Meu site</h1>
+                    <a id="menu-sobre" class="item-menu" href="#sobre-nos">Sobre Nós</a> <!-- Assim cria-se um link para outra aba do nosso site.-->
+                    <a id="menu-contato" class="item-menu" href="#contato">Contato</a>
+                </nav>
+            </header>
+            <section id="sobre-nos">
+                <h1>
+                Seja bem vindo(a) ao meu site!
+                </h1>
+            </section>
+            <section id="contato">
+                <h2>
+                Aqui você verá o meu primeiro projeto com estilização e um menu bonito.
+                </h2>
+            </section>
+
+            <script type="text/javascript">
+                const menus = document.querySelectorAll('a.item-menu');
+    
+                menus.forEach(function(menu) {
+                    menu.addEventListener('click', function(event) {
+                        event.preventDefault(); // impede o comportamento padrão do link
+    
+                        //remover a class "item-ativo"
+                        menus.forEach(function(item) {
+                            item.classList.remove('item-ativo');
+                        });
+    
+                        menu.classList.add('item-ativo');
+                    });
+                });
+            </script>
+        </body>
+</html>
