@@ -1,20 +1,21 @@
 const readline = require("readline-sync");
 
-const idade = readline.questionInt("Qual sua idade?")
-if (idade >= "18") {
-const sexo = readline.question("Qual seu sexo? M p/ masulino - F p/ feminino.")
- 
-    if (sexo.toLowerCase() == "m"){
-        console.log ("Bem vindo ao Exercito Brasileiro.");
-    }
+//Perguntar nome
+const nome = readline.question("Qual seu nome?");
 
-    if (sexo.toLowerCase() == "f"){
-        const exef = readline.question("Desejar se alistar ao exercito? S p/ sim - N p/ não.");
-        if (exef.toLowerCase() == "s");
-        console.log ("Bem vinda ao Exercito Brasileiro.");
-    } else if (exef.toLowerCase = "n"){
-        console.log("Ok, não obrigado por nada.")
-    }
-} else if (idade <= "17") {
-    console.log ("Voce nao tem a idade minima permitida.");
+//Perguntar notas.
+const nota1 = readline.questionFloat("Qual a nota do 1 bimestre? ");
+const nota2 = readline.questionFloat("Qual a nota do 2 bimestre? ");
+const nota3 = readline.questionFloat("Qual a nota do 3 bimestre? ");
+const nota4 = readline.questionFloat("Qual a nota do 4 bimestre? ");
+
+//calculár media final.
+const media = (nota1 + nota2 + nota3 + nota4)/4;
+
+console.log (`A média final do aluno ${nome}, foi de: ${media}`);
+
+if (media >= "7"){
+    console.log(`O aluno ${nome} foi aprovado com a media de ${media.toFixed(2)}`);
+} else {
+    console.log(`O aluno ${nome} foi reprovado com a media de ${media.toFixed(2)}`);
 }
