@@ -1,0 +1,154 @@
+// let - Valores podem ser alterados
+// const - Valores não podem ser alterados (CONSTANTE)
+
+// <modificador> <nome da variavel> = <valor atribuido>
+const nomePessoa = "José"
+
+// String - Representa um Texto
+const nome = "João"
+
+// Integer - Representa um número que não possui casa decimal
+const idade = 30
+
+// Float  - Representa um número que possui casa decimal
+const pi = 3.14
+
+// Bool - Representa um valor lógico: verdadeiro (true) ou falso (false)
+const ehBrasileiro = true
+
+// NULL e UNDEFINED (Não pode ser utilizado com CONST)
+// NULL - Representa um valor vazio. Atribuiu pelo menos vazio
+let variavel = null
+
+// UNDEFINED - Representa a falta de uma representação (Não possui nenhum valor atribuido)
+let naoDefinido
+
+// Object - Representa uma coleção de dados separados por Chave e Valor
+const pessoa = {
+    nome: "Maria",
+    sobrenome: "Silva",
+    idade: 19,
+    endereco: {
+        logradouro: "Rua Silva",
+        numero: 340,
+        complemento: "Frente"
+    },
+    salvar: function() {
+        console.log("Só Jesus Salva!")
+    }
+}
+
+// Um objeto é utilizado também para a criação de arquivos de configuração em Javascript.
+
+
+// Array - É uma espécie de Objeto e serve como uma lista de elementos.
+const arrayNomes = ["José", "Maria", "João", "Pedro"];
+const valoresMisturados = ["Paulinho", 22, true, { status: true }]
+
+// JSON - JavaScript Object Notation -> Notação Java Script de um Objeto
+pessoa.nome // Acessei a propriedade NOME do objeto Pessoa
+pessoa.salvar() // Chamei a função SALVAR do objeto Pessoa
+
+// Toda vez que invocar uma função/método, devo abrir e fechar parênteses
+// Toda vez que invocar uma propriedade, não preciso de parênteses.
+
+// Estrutura de Condição - Bloco de código, que irá definir uma sequência de linhas a ser executada baseada em uma condição.
+const condicao = pessoa.idade > 18;
+if (condicao) {
+    console.log("A pessoa é maior de idade")
+} else {
+    console.log("A pessoa não é maior de idade")
+}
+
+/**
+ * Assumindo uma regra de IMC onde:
+ * IMC entre 0 e 20 ---> S
+ * IMC entre 21 e 40 --> O
+ * IMC entre 41 e 60 --> V
+ * IMC acima de 61 ----> SO
+ */
+const IMC = 37;
+// && conector lógico E 
+// || conector lógico OU
+if (IMC >= 0 && IMC <= 20)  { // IF só existirá 1 (SE)
+    console.log("S");
+} else if (IMC >= 21 && IMC <= 40) { // ELSE IF podem existir quantos forem necessários (SENÃO SE)
+    console.log("O");
+} else if (IMC >= 41 && IMC <= 60) { // SENÃO SE
+    console.log("V");
+}else { // ELSE só existira 1 ou nenhum (SENÃO)
+    console.log("SO");
+}
+
+/**
+ * OPERADORES LÓGICOS
+ *  >    MAIOR
+ *  >=   MAIOR OU IGUAL
+ *  <    MENOR
+ *  <=   MENOR OU IGUAL
+ *  !=   DIFERENTE
+ *  ==   IGUAL A
+ *  !    NEGAÇÃO (SE ESTÁ VERDADEIRO, VIRA FALSO E VICE-VERSA)
+ */
+
+/**
+ * OPERADORES MATEMÁTICOS
+ *  +   SOMA
+ *  -   SUBTRAÇÃO
+ *  *   MULTIPLICAÇÃO
+ *  /   DIVISÃO
+ *  %   RESTO
+ *  **  EXPONENCIAÇÃO
+ */
+
+// Math é uma biblioteca/object em javascript para realizar operações matemáticas
+Math.pow(2, 5); // é o equivalente a 2 elevado a 5
+Math.max([2, 6, 3, 4]); // Retorna 6 - O maior valor
+Math.min([2, 6, 3, 4]); // Retorna 2 - O menor valor
+// trim - remove os espaços vazios do começo e do fim
+// trimStart - remover os espaços vazios do começo apenas
+// trimEnd - remove os espaços vazios do fim apenas
+
+// Bloco de Repetição - WHILE, DO WHILE e FOR - Repetirão um bloco de código, quantas vezes for determinado.
+// FOR - Quando eu sei quantas vezes eu preciso rodar o meu código.
+// for (iniciador ; condição ; incrementador) 
+for (let i = 0; i < 5; i++) {
+    console.log(i) // Irá imprimir o i 5x
+}
+
+let j = 0; // iniciador fora do for
+for ( ; j < 5; j++ ) { // deixei o iniciador vazio, pois foi declaro fora do for
+    console.log(j);
+}   
+
+// WHILE - Quando eu não sei quantas vezes eu preciso rodar o meu código.
+// while (condicao)
+let contador = 0;
+while (contador < 5) {
+    console.log(contador) // Irá imprimir 5x
+    contador = contador + 1 // Obrigatório mudar a minha condição constantemente, senão entrará em um laço de repetição eterno.
+}
+
+// DO WHILE - Quando eu não sei quantas vezes eu preciso rodar o meu código, mas preciso que ele seja executado pelo menos uma vez
+// do { ... codigo  ... } while (condicao)
+const SenhaSecreta = "senha123"
+let senha = ""
+do {
+    // pedir a senha
+    senha = "pedrin123"
+} while (senha != SenhaSecreta); // Irá pedir a senha pelo menos 1x antes de talvez executar várias vezes ou somente aquela única vez.
+
+
+// Como criar uma função
+
+function nomeDaFuncaoSemRetorno(parametro) {
+    // corpo da sua função
+}
+nomeDaFuncaoSemRetorno() // invocando a função
+
+function somaDoisValores(n1, n2) {
+    return n1 + n2 // Devolvendo os valores com o uso da palavra reservada return
+}
+
+// Se a função possuir retorno, guardar o resultado em uma variável ou exibir diretamente o resultado
+const valorSoma = somaDoisValores(5, 10); // Guarda o retorno na variável valorSoma
