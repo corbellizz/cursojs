@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+</head>
+<body>
+    <section id="conteudo" class="container">
+        <h1>Minha página html</h1>
+        <form action="/index.html" method="post" id="formPrincipal">
+            <div class="row">
+                <div class="col">
+                    <label for="txtNomeUsuario">Nome do usuário:</label>
+                    <input class="form-control" id="txtNomeUsuario" type="text" />
+                </div>
+                <div class="col">
+                    <label>Idade:</label>
+                    <input class="form-control" id="txtIdade" type="number" />
+                </div>
+            </div>
+            <label>Calendario:</label>
+            <input class="form-control" id="txtData" type="date" />
+
+            <label>Horario:</label>
+            <input class="form-control" id="txtHora" type="time" />
+
+            <br>
+            <br>
+            <input type="submit" value="Enviar Dados" id="btnSubmit">
+            <button type="button" class="btn btn-primary" id="btnAlerta">Enviar Alerta</button>
+        </form>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/js/principal.js"></script>
+</body>
+</html>
